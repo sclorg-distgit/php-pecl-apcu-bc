@@ -2,17 +2,19 @@
 #
 # remirepo spec file for php-pecl-apcu-bc
 #
-# Copyright (c) 2015-2016 Remi Collet
+# Copyright (c) 2015-2017 Remi Collet
 # License: CC-BY-SA
 # http://creativecommons.org/licenses/by-sa/4.0/
 #
 # Please, preserve the changelog entries
 #
 %if 0%{?scl:1}
+%global sub_prefix %{scl_prefix}
 %if "%{scl}" == "rh-php70"
 %global sub_prefix sclo-php70-
-%else
-%global sub_prefix sclo-%{scl_prefix}
+%endif
+%if "%{scl}" == "rh-php71"
+%global sub_prefix sclo-php71-
 %endif
 %scl_package       php-pecl-apcu-bc
 %endif
@@ -28,7 +30,7 @@
 Name:           %{?sub_prefix}php-pecl-%{pecl_name}
 Summary:        APCu Backwards Compatibility Module
 Version:        1.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Source0:        http://pecl.php.net/get/%{proj_name}-%{version}.tgz
 
 License:        PHP
@@ -164,6 +166,9 @@ fi
 
 
 %changelog
+* Wed Aug  9 2017 Remi Collet <remi@remirepo.net> - 1.0.3-2
+- minor change for sclo-php71
+
 * Tue Nov  8 2016 Remi Collet <remi@fedoraproject.org> - 1.0.3-1
 - cleanup for SCLo build
 
