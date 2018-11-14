@@ -16,6 +16,9 @@
 %if "%{scl}" == "rh-php71"
 %global sub_prefix sclo-php71-
 %endif
+%if "%{scl}" == "rh-php72"
+%global sub_prefix sclo-php72-
+%endif
 %scl_package       php-pecl-apcu-bc
 %endif
 
@@ -30,7 +33,7 @@
 Name:           %{?sub_prefix}php-pecl-%{pecl_name}
 Summary:        APCu Backwards Compatibility Module
 Version:        1.0.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Source0:        http://pecl.php.net/get/%{proj_name}-%{version}.tgz
 
 License:        PHP
@@ -166,6 +169,9 @@ fi
 
 
 %changelog
+* Wed Nov 14 2018 Remi Collet <remi@remirepo.net> - 1.0.3-3
+- minor change for sclo-php72
+
 * Wed Aug  9 2017 Remi Collet <remi@remirepo.net> - 1.0.3-2
 - minor change for sclo-php71
 
