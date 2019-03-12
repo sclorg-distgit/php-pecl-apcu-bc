@@ -2,7 +2,7 @@
 #
 # remirepo spec file for php-pecl-apcu-bc
 #
-# Copyright (c) 2015-2017 Remi Collet
+# Copyright (c) 2015-2019 Remi Collet
 # License: CC-BY-SA
 # http://creativecommons.org/licenses/by-sa/4.0/
 #
@@ -32,12 +32,11 @@
 
 Name:           %{?sub_prefix}php-pecl-%{pecl_name}
 Summary:        APCu Backwards Compatibility Module
-Version:        1.0.3
-Release:        3%{?dist}
+Version:        1.0.5
+Release:        1%{?dist}
 Source0:        http://pecl.php.net/get/%{proj_name}-%{version}.tgz
 
 License:        PHP
-Group:          Development/Languages
 URL:            http://pecl.php.net/package/APCu
 
 BuildRequires:  %{?scl_prefix}php-devel > 7
@@ -169,6 +168,9 @@ fi
 
 
 %changelog
+* Tue Mar 12 2019 Remi Collet <remi@remirepo.net> - 1.0.5-1
+- update to 1.0.5
+
 * Wed Nov 14 2018 Remi Collet <remi@remirepo.net> - 1.0.3-3
 - minor change for sclo-php72
 
