@@ -42,3 +42,12 @@ PHP 7.2 / EL 7
     cbs tag-build  sclo7-sclo-php72-sclo-testing   <previous>
 
 
+PHP 7.3 / EL 7
+
+    build -bs *spec --define "scl rh-php73" --define "dist .el7"
+    cbs add-pkg    sclo7-sclo-php73-sclo-candidate --owner=sclo  sclo-php73-php-pecl-apcu-bc
+    cbs add-pkg    sclo7-sclo-php73-sclo-testing   --owner=sclo  sclo-php73-php-pecl-apcu-bc
+    cbs add-pkg    sclo7-sclo-php73-sclo-release   --owner=sclo  sclo-php73-php-pecl-apcu-bc
+    cbs build      sclo7-sclo-php73-sclo-el7       <above>.src.rpm
+    cbs tag-build  sclo7-sclo-php73-sclo-testing   <previous>
+
